@@ -8,16 +8,25 @@ def list_contacts(request):
     contacts = Contact.objects.all()
     return render(request, "contacts/list_contacts.html",
                   {"contacts": contacts})
+# defines function for list_contacts with all contact objects
+# will load the list of contacts
+
+
+def view_contact(request, pk):
+    contact = get_object_or_404(Contact, pk=pk)
+    return render(request, 'contacts/view_contact.html', {'contact': contact})
 
 
 def add_contact(request):
     if request.method == 'GET':
         form = ContactForm()
+        # if add_contact is requested, the form should be the ContactForm
     else:
         form = ContactForm(data=request.POST)
         if form.is_valid():
             form.save()
             return redirect(to='list_contacts')
+            # else post the data; if form is valid save and return to list
 
     return render(request, "contacts/add_contact.html", {"form": form})
 

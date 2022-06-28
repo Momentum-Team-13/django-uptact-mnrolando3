@@ -5,11 +5,11 @@ Task 1:
 
 - If I wanted to add a birthday to each contact, what file would I edit? Database to add information; list_contacts.html to add field
 
-    - Add a birthday field to the `Contact` model. This field should be of type `DateField` and should be allowed to be null and empty.
-    - Make sure you can edit the birthday by changing the `ContactForm`.
-    - Add the ability to display the birthday on the list of contacts. You will have to edit `templates/contacts/list_contacts.html`.
+    - Add a birthday field to the `Contact` model. This field should be of type `DateField` and should be allowed to be null and empty. - DONE
+    - Make sure you can edit the birthday by changing the `ContactForm`. - DONE
+    - Add the ability to display the birthday on the list of contacts. You will have to edit `templates/contacts/list_contacts.html`. - DONE
 
-When you get through that, add a birthday to one of your contacts to test out your code.
+When you get through that, add a birthday to one of your contacts to test out your code. - DONE
 
 
 Task 2:
@@ -19,8 +19,10 @@ Task 2:
 
 - If I wanted to connect the new model to the `Contact` model, how would I do that? add it to contacts>models.py then migrate
 
-- Add a new model, `Note`, to the `contacts` app.
-    - This model should contain text for the note and the date/time of the note. Look at the `auto_now_add` option for the `DateTimeField` to have the date/time automatically populated.
-- Connect the `Note` model to the `Contact` model using a `ForeignKey`.
-- Use the Django console to add a note to one of your contacts.
+- Add a new model, `Note`, to the `contacts` app. - DONE
+    - This model should contain text for the note and the date/time of the note. Look at the `auto_now_add` option for the `DateTimeField` to have the date/time automatically populated. - DONE
+- Connect the `Note` model to the `Contact` model using a `ForeignKey`. - DONE
+- Use the Django console to add a note to one of your contacts. - DONE
 - Make a new view and template to see an individual contact. The URL for this view should be `contacts/<int:pk>/`. Show the notes for that contact on this individual view. Otherwise, this page can look like an individual contact on the contacts list page.
+
+Task 3:
