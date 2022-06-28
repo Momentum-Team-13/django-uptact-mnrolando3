@@ -4,6 +4,7 @@ from localflavor.us.models import USStateField, USZipCodeField
 
 
 class Contact(models.Model):
+    # no init because inherited from Model import
     phone_regex = RegexValidator(
         regex=r'^\+?\d{10}$',
         message="Phone number must be entered in the format: '+9999999999'.")
@@ -20,3 +21,8 @@ class Contact(models.Model):
     city = models.CharField(max_length=255, null=True, blank=True)
     state = USStateField(null=True, blank=True)
     zip_code = USZipCodeField(null=True, blank=True)
+
+
+class Note(models.Model):
+    note = models.TextField(null=True, blank=True)
+    create_date = models.DateTimeField(auto_now_add=True)
