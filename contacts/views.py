@@ -12,9 +12,9 @@ def list_contacts(request):
 # will load the list of contacts
 
 
-def view_contact(request, pk):
+def contact_detail(request, pk):
     contact = get_object_or_404(Contact, pk=pk)
-    return render(request, 'contacts/view_contact.html', {'contact': contact})
+    return render(request, 'contacts/contact_detail.html', {'contact': contact})
 
 
 def add_contact(request):
