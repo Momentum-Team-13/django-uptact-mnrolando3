@@ -2,7 +2,6 @@ from django.db import models
 from django.core.validators import RegexValidator
 from localflavor.us.models import USStateField, USZipCodeField
 # from users.models import User
-# from django.utils import timezone
 
 
 class Note(models.Model):
@@ -22,7 +21,6 @@ class Contact(models.Model):
     phone_regex = RegexValidator(
         regex=r'^\+?\d{10}$',
         message="Phone number must be entered in the format: '+9999999999'.")
-
     name = models.CharField(max_length=255)
     birthday = models.DateField(null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
