@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for note in contact.contact_notes.all %}
+<div class="flex">
+    <h1>{{ note }}</h1>
+</div>
+{% endfor %}
+<a class="red" href="{% url 'delete_note' pk=contact.pk %}">Delete Note</a>
