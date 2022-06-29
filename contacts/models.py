@@ -7,7 +7,8 @@ from localflavor.us.models import USStateField, USZipCodeField
 
 class Note(models.Model):
     note = models.TextField(null=True, blank=True)
-    create_date = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    create_date = models.DateTimeField(auto_now_add=True, null=True,
+                                       blank=True)
 
 
 class Contact(models.Model):
