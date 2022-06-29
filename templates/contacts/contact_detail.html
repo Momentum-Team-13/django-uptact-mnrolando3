@@ -38,6 +38,7 @@
         {% endfor %}
 
         <a href="{% url 'add_note' pk=contact.pk %}">Add Note</a>
+        <a class="red" href="{% url 'delete_note' pk=contact.pk %}">Delete Notes</a>
 
         <p>
             <a href="{% url 'edit_contact' pk=contact.pk %}">Edit Contact</a><br>

@@ -6,9 +6,9 @@
 <div>
   <form action="{% url 'delete_note' pk=contact.pk %}" method="POST">
     {% csrf_token %}
-    <p>Are you sure you want to delete {{ contact.contact_notes }}?</p>
+    <p>Are you sure you want to delete {{ contact.contact_notes.all }}?</p>
     <div>
-      <button type="submit">Delete Note</button><br />
+      <button type="submit">Delete Notes</button><br />
       <a href="{% url 'contact_detail' %}">Cancel</a>
     </div>
   </form>
