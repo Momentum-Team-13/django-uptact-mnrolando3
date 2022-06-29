@@ -33,11 +33,11 @@
         </div>
         {% endif %}
 
-        {% if contact.note %}
+        {% for note in contact.contact_notes.all %}
         <div class="flex">
-            <div>{{ contact.note }}</div>
+            <div>{{ note }}</div>
         </div>
-        {% endif %}
+        {% endfor %}
         <a href="{% url 'add_note' pk=contact.pk %}">Add Note</a>
 
         <p>
